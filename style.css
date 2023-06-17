@@ -415,24 +415,23 @@ color: rgb(0, 55, 182);
 
 
 
-@media only screen and  (orientation:landscape){
+@media only screen and  (max-width:760px){
   .bg-img{
-    background-image: url("images/banner-img.jpg");
+    background-image: url("images/banner-img-mob.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 67vh;
-  width: 215vh;
+  height: 33vh;
+  width: 80vh;
 }
 }
 
 
 /* Mobile devices (portrait and landscape) */
-@media only screen and (max-width: 790px) {
+@media only screen  and (max-width: 790px) {
   body {
     font-size: 14px;
   }
-
   .bg-img{
     background-image: url("images/banner-img-mob.jpg");
   background-repeat: no-repeat;
@@ -537,7 +536,7 @@ font-weight: bold;
 }
 
 .collection-text-2{
-  font-size: 7.2px;
+  font-size: 8px;
   margin-top: 0px;
   padding: 0px;
 }
@@ -550,12 +549,12 @@ font-weight: bold;
 
 
 .perfume-img-1,.perfume-img-2,.bakhoor-image{
-  height: 120px;
+  height: 145px;
 }
 
 .card-perfume,.card-perfume-2{
-  width: 12vh;
-  height: 120px;
+  width: auto;
+  height: auto;
 } 
 
 .brand-logo-1,.brand-logo-2,.brand-logo-3{
@@ -601,8 +600,8 @@ font-weight: bold;
 }
 
 .owl-nav{
-  position: absolute;
-  top: 250px;
+  visibility: hidden;
+  /* top: 250px; */
 }
 
 .owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev {
