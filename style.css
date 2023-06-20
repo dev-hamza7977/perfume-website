@@ -7,8 +7,10 @@
 @font-face {
     font-family: "ChocolateBoxDecorative Regular";
     src: local("ChocolateBoxDecorative Regular"), url("fonts/C_BOX_D.woff") format("woff");
-    /* font-family: "TrajanPro Regular";
-    src: local("TrajanPro Regular"), url("/TrajanPro-Bold.woff") format("woff"); */
+    font-family: 'Trajan Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Trajan Pro Regular'), url('fonts/TrajanPro-Regular.woff') format('woff');
   }
 
 .bg-img{
@@ -123,7 +125,7 @@ color: rgb(0 126 38);
 }
 
 .collection-text{
-  font-family: 'Trajan Pro', sans-serif;
+  font-family: "Trajan Pro Regular";
   text-decoration: solid;
   font-size: 29px;
   text-align: center;       
@@ -132,7 +134,7 @@ color: rgb(0 126 38);
 }
 
 .collection-text-2{
-  font-family: 'Trajan Pro', sans-serif;
+  font-family: "Trajan Pro Regular";
   text-decoration: solid;
   font-size: 22px;
   text-align: center;       
@@ -335,7 +337,7 @@ color: rgb(0, 55, 182);
   margin-top: 70px;
   font-size: 18px;
   text-align: center;
-  font-family: 'Trajan Pro', sans-serif;
+  font-family: "Trajan Pro Regular";
   color:#8d2dfb;
   border: 5px solid violet;
   padding: 10px;
