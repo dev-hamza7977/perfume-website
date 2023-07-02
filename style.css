@@ -440,6 +440,19 @@ color: rgb(0, 55, 182);
 .footer a:hover {
     color: #007bff;
 }
+
+.bg-2-perfume:hover,.img-collection-2:hover{
+  box-shadow: 0 0 100px cyan; 
+  border: 3px solid cyan;
+}
+
+.brand-logo-1:hover,.brand-logo-2:hover,.brand-logo-3:hover{
+  box-shadow: 0 0 100px rgb(223, 104, 233); 
+  /* border: 3px solid cyan; */
+}
+
+
+
   
 
 /* .brand-logo-2{
@@ -447,18 +460,24 @@ color: rgb(0, 55, 182);
 } */
 
 
-
 /* 
-@media only screen and  (max-width:760px){
-  .bg-img{
-    background-image: url("images/banner-img.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 33vh;
-  width: 80vh;
-}
+@media only screen and (orientation: landscape) {
+  .card-collection{
+    width: auto;
+    height: 65vh;
+  }  
+
+  .bg-2-perfume,.img-collection-2{
+   width: 218vh;
+    height: 65vh;
+  }
+
+  .bg-img-1,.bg-img-2,.bg-img-3{
+    width: auto;
+    height: 40vh;
+  } 
 } */
+
 
 
 /* Mobile devices (portrait and landscape) */
@@ -492,6 +511,8 @@ background-size: cover;
 height: 33vh;
 width: auto;
 }
+
+
 
 .perfumes-slogan,.perfumes-slogan-arrow{
   color: rgb(174, 0, 255);

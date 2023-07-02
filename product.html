@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ZIARAT PERFUMERS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.cdnfonts.com/css/trajan-pro" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-three.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+
+
+    <section class="container navbar-sec">
+        <div class="navbar">
+            <nav class="navbar navbar-expand-lg w-100">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img class="logo img-fluid" src="images/logo.png" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active mx-2" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="about-us.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="product.html">Products</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-2" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                        <span class="nav-item">
+                            <a class="nav-link mx-0" href="#"> <i class="fa fa-shopping-basket"
+                                    aria-hidden="true"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="categories bg-none">
+                    <h1 class="title-cat">CATEGORIES</h1>
+                    <ul class="catog-list">
+                        <li href="#" onclick="filterProducts('perfumes')">PERFUMES</a></li>
+                        <li href="#" onclick="filterProducts('ouds')">OUD'S</a></li>
+                        <li href="#" onclick="filterProducts('attars')">ATTAR'S</a></li>
+                        <li href="#" onclick="filterProducts('bakhors')">BAKHOOR'S</a></li>
+                    </ul>
+                </div>
+                <div class="filter">
+                    <h1 class="title-filter">FILTER BY</h1>
+                    <form onsubmit="applyFilters(); return false;">
+                        <div class="d-flex align-items-center">
+                            <input type="number" class="form-control mx-2" id="minPrice" placeholder="Min Price">
+                            -
+                            <input type="number" class="form-control mx-2" id="maxPrice" placeholder="Max Price">
+                        </div>
+                        <div class="d-flex justify-content-end mt-3">
+                            <button type="submit" class="btn btn-primary mx-2">Apply</button>
+                            <button type="button" class="btn btn-secondary" onclick="resetFilters()">Reset</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="row" id="productGrid"></div>
+                <div class="pagination justify-content-between my-3">
+                    <button class="btn btn-secondary" onclick="previousPage()"><i class="fa fa-caret-left"
+                            aria-hidden="true"></i></button>
+                    <span id="currentPage" class="border rounded-4 border-info  p-2 mb-2"></span>
+                    <button class="btn btn-secondary" onclick="nextPage()"><i class="fa fa-caret-right"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-black text-white">
+        <div class="container">
+            <div class="row g-0 ">
+                <div class="col-md-4">
+                    <h5>Get in touch with us:</h5>
+                    <a href="https://www.instagram.com/ziarat_for_oud/?hl=en" class="text-white mx-1"><i
+                            class="fa fa-instagram"></i> Instagram</a>
+                    <a href="https://api.whatsapp.com/send?phone=919619000488&msg=hi" class="text-white mx-1"><i
+                            class="fa fa-whatsapp"></i> WhatsApp</a>
+                    <a href="https://www.youtube.com/@ziaratperfumer2482" class="text-white mx-1"><i
+                            class="fa fa-youtube"></i> YouTube</a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links:</h5>
+                    <ul class="list-unstyled">
+                        <li><a class="text-white" href="index.html">Home</a></li>
+                        <li><a class="text-white" href="about-us.html">About Us</a></li>
+                        <li><a class="text-white" href="product.html">Our Products</a></li>
+                        <li><a class="text-white" href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Search:</h5>
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 ZIARAT PERFUMES. All rights reserved. <br> Powered by <a
+                        href="https://meghanihamza.netlify.app/" class="text-warning text-bold">WEB WONDERS</a></p>
+                <p>"Unlock the magic of your online presence with Web Wonders! Contact us today for exceptional website
+                    creation that goes beyond expectations. Let us help your business thrive. <br> Call us now at
+                    [7977027359] for more information."</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script>
+        const listItems = document.querySelectorAll('ul li');
+
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                listItems.forEach(item => item.classList.remove('clicked'));
+                item.classList.add('clicked');
+            });
+        });
+    </script>
+
+
+    <script>
+        const products = [
+            {
+                image: "images/perfumes/d,oud-salamat-100ml.jpg",
+                title: "D. OUD SALAMAH 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 3500
+            },
+            {
+                image: "images/perfumes/khalifa-100ml.jpg",
+                title: "KHALIFA 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 3500
+            },
+            {
+                image: "images/perfumes/lailatul-ziarat-100ml.jpg",
+                title: "LAILATUL ZIARAT 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 3500
+            },
+            {
+                image: "images/perfumes/misk-rizali-100ml.jpg",
+                title: "MISK RAZALI 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 3500
+            },
+            {
+                image: "images/perfumes/oud-azrak-100ml.jpg",
+                title: "OUD AZRAK 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 3500
+            },
+            {
+                image: "images/perfumes/oud-kalakasi-100ml.jpg",
+                title: "OUD KALAKASI 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 3500
+            },
+            {
+                image: "images/perfumes/shaikat-100ml.jpg",
+                title: "SHAIKAT 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 3500
+            },
+            {
+                image: "images/perfumes/zafran-khususi-100ml.jpg",
+                title: "ZAFRAN KHUSUSI 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 3500
+            },
+            {
+                image: "images/perfumes/amiraloud.jpeg",
+                title: "AMIR AL OUD 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 1500
+            },
+            {
+                image: "images/perfumes/arabianrose.jpeg",
+                title: "ARABIAN ROSE 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 5000
+            },
+            {
+                image: "images/perfumes/beautiful.jpeg",
+                title: "BEAUTIFUL 100 ML",
+                description: "FRENCH TONE PERFUME",
+                category: "perfumes",
+                price: 1500
+            },
+            {
+                image: "images/perfumes/bluesauvage.jpeg",
+                title: "BLUE SAUVAGE 100 ML",
+                description: "FRENCH TONE PERFUME",
+                category: "perfumes",
+                price: 1500
+            },
+            {
+                image: "images/perfumes/dehnaloud.jpeg",
+                title: "DEHNL OUD 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 2000
+            },
+            {
+                image: "images/perfumes/hiness.jpeg",
+                title: "HINESS 100 ML",
+                description: "FRENCH TONE PERFUME",
+                category: "perfumes",
+                price: 1800
+            },
+            {
+                image: "images/perfumes/karbonn.jpeg",
+                title: "KARBONN 100 ML",
+                description: "FRENCH TONE PERFUME",
+                category: "perfumes",
+                price: 1200
+            },
+            {
+                image: "images/perfumes/majestic.jpeg",
+                title: "MAJESTIC 100 ML",
+                description: "FRENCH TONE",
+                category: "perfumes",
+                price: 1800
+            },
+            {
+                image: "images/perfumes/mukhallat.jpeg",
+                title: "MUKHALLAT I 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 1800
+            },
+            {
+                image: "images/perfumes/mukahllat2.jpeg",
+                title: "MUKHALLAT II 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 1800
+            },
+            {
+                image: "images/perfumes/oudkadeem.jpeg",
+                title: "OUD KADEEM 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes",
+                price: 2500
+            },
+            {
+                image: "images/perfumes/oudsaffron.jpeg",
+                title: "OUD SAFFRON 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes ",
+                price: 1500
+            },
+            {
+                image: "images/perfumes/saudioud.jpeg",
+                title: "SAUDI OUD 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes ",
+                price: 1800
+            },
+            {
+                image: "images/perfumes/shaikhoud.jpeg",
+                title: "SHAIKH AL OUD 100 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes ",
+                price: 2000
+            },
+            {
+                image: "images/perfumes/sweet.jpeg",
+                title: "SWEET",
+                description: "FRENCH TONE PERFUME",
+                category: "perfumes ",
+                price: 1200
+            },
+            {
+                image: "images/perfumes/wildwest.jpeg",
+                title: "WIDWEST",
+                description: "FRENCH TONE PERFUME",
+                category: "perfumes ",
+                price: 1200
+            },
+            {
+                image: "images/perfumes/zaina.jpeg",
+                title: "ZAINA 50 ML",
+                description: "ARABIAN TONE PERFUME",
+                category: "perfumes ",
+                price: 1800
+            },
+            {
+                image: "images/perfumes/ziaratblue.jpeg",
+                title: "ZIARAT BLUE 100 ML",
+                description: "FRENCH TONE PERFUME",
+                category: "perfumes ",
+                price: 1500
+            },
+            {
+                image: "images/perfumes/ziaratnight.jpeg",
+                title: "ZIARAT NIGHT 100 ML",
+                description: "FRENCH TONE PERFUME",
+                category: "perfumes ",
+                price: 1500
+            },
+            // Add more products as needed
+        ];
+
+
+
+        const productsPerPage = 6;
+        let filteredProducts = [...products];
+        let currentPage = 1;
+
+        function generateProductGrid() {
+            const productGrid = document.getElementById('productGrid');
+            const minPrice = parseInt(document.getElementById('minPrice').value) || 0;
+            const maxPrice = parseInt(document.getElementById('maxPrice').value) || Infinity;
+
+            let productCards = '';
+
+            const startIndex = (currentPage - 1) * productsPerPage;
+            const endIndex = startIndex + productsPerPage;
+
+            for (let i = startIndex; i < endIndex && i < filteredProducts.length; i++) {
+                const product = filteredProducts[i];
+
+                if (product.price >= minPrice && product.price <= maxPrice) {
+                    const card = `
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card my-2">
+                            <img src="${product.image}" class="card-img-top perfumes-img" alt="Product Image">
+                            <div class="card-body row">
+                                <h5 class="card-title product-card-title">${product.title}</h5>
+                                <p class="card-text des-text">${product.description}</p>
+                                <p class="card-text price-text">₹${product.price}</p>
+                                <button class="btn  w-100 btn-outline-primary text-align-bottom text-center" onclick="buyProduct('${product.title}')">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                    productCards += card;
+                }
+            }
+
+            productGrid.innerHTML = productCards;
+
+            const currentPageElement = document.getElementById('currentPage');
+            currentPageElement.textContent = `Page ${currentPage}`;
+        }
+
+        function filterProducts(category) {
+            filteredProducts = products.filter(product => product.category === category);
+            currentPage = 1;
+            generateProductGrid();
+        }
+
+        function applyFilters() {
+            currentPage = 1;
+            generateProductGrid();
+        }
+
+        function resetFilters() {
+            filteredProducts = [...products];
+            document.getElementById('minPrice').value = '';
+            document.getElementById('maxPrice').value = '';
+            currentPage = 1;
+            generateProductGrid();
+        }
+
+        function buyProduct(title) {
+            alert(`You clicked the buy button for ${title}`);
+        }
+
+        function previousPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                generateProductGrid();
+            }
+        }
+
+        function nextPage() {
+            const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
+            if (currentPage < totalPages) {
+                currentPage++;
+                generateProductGrid();
+            }
+        }
+
+        // Generate initial product grid
+        generateProductGrid();
+    </script>
+</body>
+
+</html>
