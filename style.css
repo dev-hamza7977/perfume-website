@@ -451,6 +451,39 @@ color: rgb(0, 55, 182);
   /* border: 3px solid cyan; */
 }
 
+.navbar-toggler {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.navbar-toggler span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin-bottom: 4px;
+  transition: transform 0.3s;
+}
+
+.navbar-toggler.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.navbar-toggler.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
 
 
   

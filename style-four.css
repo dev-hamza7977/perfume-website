@@ -1,0 +1,46 @@
+@font-face {
+    font-family: "ChocolateBoxDecorative Regular";
+    src: local("ChocolateBoxDecorative Regular"), url("fonts/C_BOX_D.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: 'Trajan Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Trajan Pro Regular'), url('fonts/TrajanPro-Regular.woff') format('woff');
+  }
+
+  .title-contact{
+    font-family:fantasy;
+  font-size: 65px;
+  text-align: center;}
+
+  .text-para-contact{
+    font-family: 'Trajan Pro Regular';
+    font-size: 20px;
+  }
+
+  .contact-det-tit {
+    font-size: 25px;
+    font-family: fantasy;
+  }
+  
+  .contact-det-tit-text {
+    font-family: 'Trajan Pro Regular';
+    font-size: 15px;
+  }
+
+  .a-mail{
+    text-decoration: none;
+  }
+  
+  
+  @media (max-width: 790px) {
+
+    .contact-det-tit-text {
+        font-family: 'Trajan Pro Regular';
+        font-size: 15px;
+        text-align: center;
+        margin-top:0px;
+      }
+  }

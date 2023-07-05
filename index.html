@@ -25,8 +25,11 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#"><img class="logo img-fluid" src="images/logo.png" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+                        data-target="#navbar-collapse-uarr">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
@@ -331,6 +334,13 @@
                 }
             }
         })
+    </script>
+    <script>
+        const navbarToggler = document.querySelector('.navbar-toggler');
+
+        navbarToggler.addEventListener('click', () => {
+            navbarToggler.classList.toggle('active');
+        });
     </script>
 </body>
 

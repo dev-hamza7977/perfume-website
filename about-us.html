@@ -23,8 +23,11 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#"><img class="logo img-fluid" src="images/logo.png" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+                        data-target="#navbar-collapse-uarr">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
@@ -64,9 +67,12 @@
                                 !"</i></span>
                         <br> <br>
                         As passionate perfumers for many years, we at ziarat perfumes have dedicated ourselves to
-                        the art of crafting exquisite scents that captivate the senses. With an unwavering commitment to
-                        quality and creativity, our team of skilled artisans meticulously blend the finest ingredients
-                        to create luxurious perfumes that evoke emotions and memories. From timeless classics to modern
+                        the art of crafting exquisite scents that captivate the senses. With an unwavering
+                        commitment to
+                        quality and creativity, our team of skilled artisans meticulously blend the finest
+                        ingredients
+                        to create luxurious perfumes that evoke emotions and memories. From timeless classics to
+                        modern
                         masterpieces, each fragrance is a testament to our expertise and devotion to perfection.
                         Experience the allure of our collection and indulge in scents that enchant.
                     </p>
@@ -187,7 +193,8 @@
             <div class="text-center">
                 <p>&copy; 2023 ZIARAT PERFUMES. All rights reserved. <br> Powered by <a
                         href="https://meghanihamza.netlify.app/" class="text-warning text-bold">WEB WONDERS</a></p>
-                <p>"Unlock the magic of your online presence with Web Wonders! Contact us today for exceptional website
+                <p>"Unlock the magic of your online presence with Web Wonders! Contact us today for exceptional
+                    website
                     creation that goes beyond expectations. Let us help your business thrive. <br> Call us now at
                     [7977027359] for more information."</p>
             </div>
@@ -257,6 +264,13 @@
                     }
                 }
             );
+        });
+    </script>
+    <script>
+        const navbarToggler = document.querySelector('.navbar-toggler');
+
+        navbarToggler.addEventListener('click', () => {
+            navbarToggler.classList.toggle('active');
         });
     </script>
 

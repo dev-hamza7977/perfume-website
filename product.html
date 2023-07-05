@@ -26,8 +26,11 @@
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#"><img class="logo img-fluid" src="images/logo.png" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation"
+                        data-target="#navbar-collapse-uarr">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav me-auto mb-2 mx-auto mb-lg-0">
@@ -140,6 +143,63 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control" id="floatingInput" placeholder="name">
+                                <label for="floatingInput">Name</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" placeholder="Address" id="floatingTextarea"></textarea>
+                                <label for="floatingTextarea">Address</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="mobilenumber" placeholder="1234567890">
+                                <label for="floatingInput">Mobile Number:</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-floating mb-3">
+                                <input type="number" class="form-control" id="floatingInput" placeholder="1234567890">
+                                <label for="floatingInput">Qty:</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>SELECT PAYMENT METHOD</option>
+                                <option value="1">CASH ON DELIVERY</option>
+                                <option value="2" disabled>ONLINE PAYMENT</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">BUY NOW</button>
+                    <!-- <button type="button" class="btn btn-secondary">Close</button> -->
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -385,7 +445,7 @@
                                 <h5 class="card-title product-card-title">${product.title}</h5>
                                 <p class="card-text des-text">${product.description}</p>
                                 <p class="card-text price-text">₹${product.price}</p>
-                                <button class="btn  w-100 btn-outline-primary text-align-bottom text-center" onclick="buyProduct('${product.title}')">Buy</button>
+                                <button class="btn  w-100 btn-outline-primary text-align-bottom text-center" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="buyProduct('${product.title}')">Buy</button>
                             </div>
                         </div>
                     </div>
@@ -441,6 +501,13 @@
 
         // Generate initial product grid
         generateProductGrid();
+    </script>
+    <script>
+        const navbarToggler = document.querySelector('.navbar-toggler');
+
+        navbarToggler.addEventListener('click', () => {
+            navbarToggler.classList.toggle('active');
+        });
     </script>
 </body>
 
