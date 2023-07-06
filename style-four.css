@@ -34,13 +34,51 @@
     text-decoration: none;
   }
   
+
+  .video-1{
+    width: 25vh;
+  }
   
+.text-must-visit{
+  font-family: 'Trajan Pro Regular';
+  font-size: 26px;
+
+}
+
+.our-branches{
+  background: linear-gradient(-45deg, #fff374, #c1f190, #fdbe1e);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.images-mohd{
+  width: 45vh;
+}
+
+.map-text{
+  font-size: 20px;
+  font-family: 'Trajan Pro Regular';
+
+}
+
   @media (max-width: 790px) {
 
     .contact-det-tit-text {
-        font-family: 'Trajan Pro Regular';
-        font-size: 15px;
-        text-align: center;
-        margin-top:0px;
-      }
+      font-family: 'Trajan Pro Regular';
+      font-size: 15px;
+      text-align: center;
+      margin-top:0px;
+    }
+      
+
+    .video-1{
+      width: 40vh;
+      margin-top: 20px;
+    }
+
+    .images-mohd{
+      margin-top: 20px;
+    }
+
+
   }

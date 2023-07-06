@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -58,7 +59,7 @@
 
     <section class="container-fluid">
         <div class="banner-dec">
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel owl-theme" data-aos="zoom-in">
                 <div class="item">
                     <div class="bg-img img-fluid">
                         <div class="row">
@@ -135,21 +136,24 @@
         <div class="card-img">
             <div class="row g-0">
                 <div class="col-lg-4">
-                    <img src="images/bg-2.jpg" class="img-fluid bg-2-perfume" alt="perfume-img">
+                    <img src="images/bg-2.jpg" class="img-fluid bg-2-perfume" alt="perfume-img" data-aos="flip-right">
                 </div>
                 <div class="col-lg-3">
-                    <div class="card rounded-0 text-center card-collection">
+                    <div class="card rounded-0 text-center card-collection" data-aos="flip-left">
                         <div class="card-body">
-                            <p class="card-text text-collection">"Exquisite scents of Arabian Perfumes, Oud oil, and
+                            <p class="card-text text-collection">"Exquisite scents of Arabian
+                                Perfumes, Oud oil, and
                                 enchanting wood."
                             </p>
-                            <a href="product.html" class="btn btn-outline-dark btn-view-collection text-center">VIEW
+                            <a href="product.html" class="btn btn-outline-dark btn-view-collection text-center"
+                                data-aos="flip-right">VIEW
                                 COLLECTION</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <img src="images/oud-img.jpg" class="img-fluid img-collection-2" alt="perfume-img">
+                    <img src="images/oud-img.jpg" class="img-fluid img-collection-2" alt="perfume-img"
+                        data-aos="flip-right">
                 </div>
             </div>
         </div>
@@ -159,13 +163,16 @@
         <h1 class="text-brands"><b><i>MOST POPULAR BRANDS</i></b></h1>
         <div class="row text-center">
             <div class="col-lg-4">
-                <img src="images/logo.png" class="img-fluid brand-logo-1 text-center" alt="brands-logo">
+                <img src="images/logo.png" class="img-fluid brand-logo-1 text-center" alt="brands-logo"
+                    data-aos="flip-up">
             </div>
             <div class="col-lg-4">
-                <img src="images/shahzeen logo.png" class="img-fluid brand-logo-2 text-center" alt="brands-logo">
+                <img src="images/shahzeen logo.png" class="img-fluid brand-logo-2 text-center" alt="brands-logo"
+                    data-aos="flip-down">
             </div>
             <div class="col-lg-4">
-                <img src="images/amd-logo.png" class="img-fluid brand-logo-3 text-center" alt="brands-logo">
+                <img src="images/amd-logo.png" class="img-fluid brand-logo-3 text-center" alt="brands-logo"
+                    data-aos="flip-up">
             </div>
         </div>
     </section>
@@ -177,7 +184,7 @@
 
         <div class="d-flex justify-content-center justify-content-xxl-between flex-wrap arabian-perfumes">
             <div class="mt-4">
-                <div class="product-card product-card-1">
+                <div class="product-card product-card-1" data-aos="zoom-in">
                     <div class="card">
                         <div class="card-body card-product-body text-center">
                             <h5 class="card-title title-salamah">DEHNUL OUD SALAMAH <br> <span class="arabic-title">دهن
@@ -191,7 +198,7 @@
             </div>
 
             <div class="mt-4">
-                <div class="product-card">
+                <div class="product-card" data-aos="zoom-out">
                     <div class="card">
                         <div class="card-body card-product-body text-center oud-kalakasi">
                             <h5 class="card-title kalakasi-title">OUD KALAKASI <br> <span
@@ -205,7 +212,7 @@
             </div>
 
             <div class="mt-4">
-                <div class="product-card">
+                <div class="product-card" data-aos="zoom-in-down">
                     <div class="card">
                         <div class="card-body card-product-body text-center lailatul-ziarat-card">
                             <h5 class="card-title lailat-title">LAILATUL ZIARAT <br> <span class="arabic-lailat">ليلة
@@ -220,7 +227,7 @@
             </div>
 
             <div class="mt-4">
-                <div class="product-card">
+                <div class="product-card" data-aos="zoom-in-left">
                     <div class="card">
                         <div class="card-body card-product-body text-center shaikha-card">
                             <h5 class="card-title shaikha-title">SHAIKHA <br> <span
@@ -238,7 +245,7 @@
 
 
 
-    <section class="container perfumes-quote">
+    <section class="container perfumes-quote" data-aos="fade-up" data-aos-duration="3000">
         <p class="quote-perfumes">""Within the realm of fragrance, Ziarat Perfumes stands as an oasis of olfactory
             excellence, where the finest scents are crafted with devotion and passion. Like a precious gem unearthed
             from the depths of the earth, Ziarat For Oud emanates an aura of mystique and allure. Each drop of this
@@ -309,6 +316,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 
     <script>
         $('.owl-carousel').owlCarousel({
@@ -341,6 +350,9 @@
         navbarToggler.addEventListener('click', () => {
             navbarToggler.classList.toggle('active');
         });
+    </script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
