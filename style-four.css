@@ -80,5 +80,9 @@
       margin-top: 20px;
     }
 
+    .video-2{
+      visibility:hidden;
+      display:none;
+    }
 
   }
